@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="playwrightTraditional" time="16.182" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="playwrightLLM" time="45.608" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -59,5 +59,73 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testCaseBookstore" classname="playwrightTraditional" time="15.457"/>
+  <testcase name="testEarbudsPurchaseWorkflow" classname="playwrightLLM" time="43.095">
+    <error message="Error {&#10;  message=&apos;Timeout 30000ms exceeded.&#10;  name=&apos;TimeoutError&#10;  stack=&apos;TimeoutError: Timeout 30000ms exceeded.&#10;    at ProgressController.run (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\progress.js:86:28)&#10;    at FrameDispatcher._runCommand (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\dispatchers\dispatcher.js:91:31)&#10;    at DispatcherConnection.dispatch (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\dispatchers\dispatcher.js:325:39)&#10;}&#10;Call log:&#10;-   - waiting for locator(&quot;#facet-Color &gt; .facet__values &gt; .facet__list &gt; li &gt; form &gt; label &gt; .facet__list__label &gt; .facet__list__mark &gt; .facet-unchecked &gt; svg&quot;).first()&#10;-     - locator resolved to &lt;svg width=&quot;18&quot; height=&quot;18&quot; role=&quot;presentation&quot; viewBox=&quot;0 0 18 18&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;…&lt;/svg&gt;&#10;-   - attempting click action&#10;-     2 × waiting for element to be visible, enabled and stable&#10;-       - element is not visible&#10;-     - retrying click action&#10;-     - waiting 20ms&#10;-     2 × waiting for element to be visible, enabled and stable&#10;-       - element is not visible&#10;-     - retrying click action&#10;-       - waiting 100ms&#10;-     56 × waiting for element to be visible, enabled and stable&#10;-        - element is not visible&#10;-      - retrying click action&#10;-        - waiting 500ms&#10;" type="com.microsoft.playwright.TimeoutError"><![CDATA[com.microsoft.playwright.TimeoutError: 
+Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\progress.js:86:28)
+    at FrameDispatcher._runCommand (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\dispatchers\dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\dispatchers\dispatcher.js:325:39)
+}
+Call log:
+-   - waiting for locator("#facet-Color > .facet__values > .facet__list > li > form > label > .facet__list__label > .facet__list__mark > .facet-unchecked > svg").first()
+-     - locator resolved to <svg width="18" height="18" role="presentation" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">…</svg>
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not visible
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not visible
+-     - retrying click action
+-       - waiting 100ms
+-     56 × waiting for element to be visible, enabled and stable
+-        - element is not visible
+-      - retrying click action
+-        - waiting 500ms
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:244)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:164)
+	at com.microsoft.playwright.Locator.click(Locator.java:2543)
+	at playwrightLLM.testEarbudsPurchaseWorkflow(playwrightLLM.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\progress.js:86:28)
+    at FrameDispatcher._runCommand (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\dispatchers\dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\dispatchers\dispatcher.js:325:39)
+}
+Call log:
+-   - waiting for locator("#facet-Color > .facet__values > .facet__list > li > form > label > .facet__list__label > .facet__list__mark > .facet-unchecked > svg").first()
+-     - locator resolved to <svg width="18" height="18" role="presentation" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">…</svg>
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not visible
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not visible
+-     - retrying click action
+-       - waiting 100ms
+-     56 × waiting for element to be visible, enabled and stable
+-        - element is not visible
+-      - retrying click action
+-        - waiting 500ms
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 9 more
+]]></error>
+  </testcase>
 </testsuite>

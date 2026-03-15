@@ -1,0 +1,72 @@
+-------------------------------------------------------------------------------
+Test set: playwrightLLM
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 45.61 s <<< FAILURE! -- in playwrightLLM
+playwrightLLM.testEarbudsPurchaseWorkflow -- Time elapsed: 43.10 s <<< ERROR!
+com.microsoft.playwright.TimeoutError: 
+Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\progress.js:86:28)
+    at FrameDispatcher._runCommand (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\dispatchers\dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\dispatchers\dispatcher.js:325:39)
+}
+Call log:
+-   - waiting for locator("#facet-Color > .facet__values > .facet__list > li > form > label > .facet__list__label > .facet__list__mark > .facet-unchecked > svg").first()
+-     - locator resolved to <svg width="18" height="18" role="presentation" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">…</svg>
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not visible
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not visible
+-     - retrying click action
+-       - waiting 100ms
+-     56 × waiting for element to be visible, enabled and stable
+-        - element is not visible
+-      - retrying click action
+-        - waiting 500ms
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:244)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:164)
+	at com.microsoft.playwright.Locator.click(Locator.java:2543)
+	at playwrightLLM.testEarbudsPurchaseWorkflow(playwrightLLM.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\progress.js:86:28)
+    at FrameDispatcher._runCommand (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\dispatchers\dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (C:\Users\chris\AppData\Local\Temp\playwright-java-533592379491432074\package\lib\server\dispatchers\dispatcher.js:325:39)
+}
+Call log:
+-   - waiting for locator("#facet-Color > .facet__values > .facet__list > li > form > label > .facet__list__label > .facet__list__mark > .facet-unchecked > svg").first()
+-     - locator resolved to <svg width="18" height="18" role="presentation" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">…</svg>
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not visible
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not visible
+-     - retrying click action
+-       - waiting 100ms
+-     56 × waiting for element to be visible, enabled and stable
+-        - element is not visible
+-      - retrying click action
+-        - waiting 500ms
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 9 more
+
